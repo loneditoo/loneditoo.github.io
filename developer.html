@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+        .about-me-section {
+            margin-top: 30px;
+            max-width: 800px;
+            text-align: left;
+        }
+        .about-me-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid green;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .skills-section {
+            margin-top: 40px;
+            width: 100%;
+        }
+        .skills-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid green;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+            gap: 30px; /* Space between icons */
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .skill:hover {
+            transform: scale(1.1); /* Slight zoom effect */
+            background-color: green;
+        }
+        .skill img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            border: 2px solid green;
+        }
+        .skill span {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>I am <span style="color: lime;">Somebody Nobody</span></h1>
+    <p>My name is <strong style="color: yellow;">Metalacrobat</strong>.</p>
+    <p>I am a passionate developer with a <span style="color: cyan;">Bachelor's degree in Technology</span>.</p>
+
+    <div class="skills-section">
+        <h2>Languages & Frameworks</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <img src="./html-5.362x512.png" alt="HTML Icon">
+                <span>HTML</span>
+            </div>
+            <div class="skill">
+                <img src="./css-3.362x512.png" alt="CSS Icon">
+                <span>CSS</span>
+            </div>
+            <div class="skill">
+                <img src="./javascript-js-square.511x512.png" alt="JavaScript Icon">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill">
+                <img src="./windows.504x512.png" alt="Windows Icon">
+                <span>Windows</span>
+            </div>
+            <div class="skill">
+                <img src="./arch-linux.512x512.png" alt="Linux Icon">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <img src="./rust.256x256.png" alt="Rust Icon">
+                <span>Rust</span>
+            </div>
+            <div class="skill">
+                <img src="./nix.256x223.png" alt="Nix Icon">
+                <span>Nix</span>
+            </div>
+            <div class="skill">
+                <img src="./icons8-power-bi-48.png" alt="Power BI Icon">
+                <span>Power BI</span>
+            </div>
+            <div class="skill">
+                <img src="./sql-database-generic.380x512.png" alt="SQL Icon">
+                <span>SQL</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-me-section">
+        <h2>About Me</h2>
+        <p>
+            I am a <span style="color: orange;">curious</span> and <span style="color: lime;">driven</span> individual who loves solving problems and creating innovative solutions. 
+            My journey as a developer began with a fascination for technology and its ability to transform lives. 
+            Over the years, I have honed my skills in various programming languages, frameworks, and tools, 
+            and I am always eager to learn more.
+        </p>
+        <p>
+            Beyond coding, I am deeply passionate about exploring the intersection of <span style="color: pink;">art</span> and <span style="color: cyan;">technology</span>. 
+            I believe that creativity and logic go hand in hand, and I strive to bring a unique perspective 
+            to every project I work on. Whether it's designing intuitive user interfaces, optimizing backend systems, 
+            or experimenting with new technologies, I am always up for a challenge.
+        </p>
+        <p>
+            In my free time, I enjoy <span style="color: violet;">sketching</span>, tinkering with open-source projects, and contributing to the tech community. 
+            I am also an avid learner who loves diving into books, tutorials, and courses to expand my knowledge.
+        </p>
+    </div>
+
+    <script>
+        // Add some interactivity
+        document.querySelectorAll('.skill').forEach(skill => {
+            skill.addEventListener('click', () => {
+                alert(`You clicked on ${skill.querySelector('span').textContent}!`);
+            });
+        });
+
+        // Add a fun hover effect to the title
+        const title = document.querySelector('h1');
+        title.addEventListener('mouseover', () => {
+            title.style.color = 'cyan';
+        });
+        title.addEventListener('mouseout', () => {
+            title.style.color = 'lime';
+        });
+    </script>
+</body>
+</html>

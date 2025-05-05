@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch Artist Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Sketchy font */
+            position: relative;
+            height: 100vh;
+            background-image: url('./assests/images/halo.jpeg'); /* Replace with your local image file name */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black;
+        }
+
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.8);
+            overflow: hidden;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        .center-heading {
+            position: absolute;
+            top: 30%; /* Adjusted for better layout */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: black;
+            text-align: center;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5); /* Adds a shadow for artistic effect */
+        }
+
+        .center-heading span {
+            display: block;
+        }
+
+        .bottom-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 50px; /* Increased space between buttons */
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+        }
+
+        .bottom-buttons button {
+            padding: 15px 30px;
+            background-color: white;
+            color: black;
+            border: 3px solid black;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            box-shadow: 4px 4px 0px black; /* Hand-drawn shadow effect */
+            transition: all 0.3s ease;
+        }
+
+        .bottom-buttons button:hover {
+            background-color: black;
+            color: white;
+            box-shadow: 6px 6px 0px black; /* Enlarges shadow on hover */
+            transform: translate(-3px, -3px); /* Adds movement effect */
+        }
+
+        .bottom-buttons button:active {
+            box-shadow: 2px 2px 0px black; /* Reduces shadow on click */
+            transform: translate(2px, 2px); /* Simulates a pressed effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Welcome</a>
+    </div>
+    <h1 class="center-heading">
+        <span id="line1" class="sketchy-text">I am</span>
+        <span id="line2" class="sketchy-text">Somebody</span>
+        <span id="line3" class="sketchy-text">Nobody</span>
+    </h1>
+    <script>
+        const lines = [
+            "I am",
+            "An Artist",
+            "maybe",
+            "I am",
+            "A Dreamer",
+            "maybe",
+            "I am",
+            "A Creator",
+            "maybe"
+        ];
+        let currentIndex = 0;
+
+        function updateText() {
+            const line1 = document.getElementById("line1");
+            const line2 = document.getElementById("line2");
+            const line3 = document.getElementById("line3");
+
+            line1.textContent = lines[currentIndex % lines.length];
+            line2.textContent = lines[(currentIndex + 1) % lines.length];
+            line3.textContent = lines[(currentIndex + 2) % lines.length];
+
+            currentIndex++;
+        }
+
+        setInterval(updateText, 2000); // Change text every 2 seconds
+    </script>
+    <style>
+        .sketchy-text {
+            font-size: 70px; /* Bigger text size */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Sketchy font */
+            color: black;
+            text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7); /* Stronger shadow for highlight */
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+
+        
+    </script>
+    <div class="bottom-buttons">
+        <button onclick="location.href='auto.html'">Auto Enthusiast</button>
+        <button onclick="location.href='artist.html'">Artist</button>
+        <button onclick="location.href='developer.html'">Developer</button>
+    </div>
+</body>
+</html>
